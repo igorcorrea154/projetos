@@ -1,0 +1,5 @@
+times = ("botafogo","palmeiras","fortaleza","Flamengo","São Paulo","Bahia","Cruzeiro","Internacional","Atlético-MG","Vasco","Bragantino","Juventude","Criciúma","Grêmio","Athletico-PR","Vitória","Corinthians","Fluminense","Cuiabá","Atlético-GO")
+print(f"os 5 primeiros times sao: {times[0:5]}")
+print(f"os ultimos 4 colocados foram: {times[-4:]}")
+print(sorted(times))
+print(f"o time do {times[3]} está na {times.index("Flamengo")} posição")
