@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>1° projeto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            margin: 1em 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .blog-post {
+            margin-bottom: 40px;
+        }
+        .blog-post h2 {
+            color: #333;
+        }
+        .blog-post p {
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Blog Pessoal</h1>
+    </header>
+
+    <nav>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="blog-post">
+                <h2>Postagem 1: Primeiro projeto</h2>
+                <p>Bem-vindo ao meu 1° projeto como programador.</p>
+            </div>
+            <div class="blog-post">
+                <h2>Postagem 2: Aprendendo Django</h2>
+                <p>Iniciando no Python e Django.</p>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3>Sobre Mim</h3>
+            <p>Sou um desenvolvedor apaixonado por tecnologia e programação.</p>
+            <h3>Links Úteis</h3>
+            <ul>
+                <li>
+                    <img src="https://th.bing.com/th/id/OIP.5F69UljXc5LLeM63sxM-6wHaHa?rs=1&pid=ImgDetMain" alt="GitHub" width="25" height="25">
+                    <a href="https://github.com/igorcorrea154?tab=repositories" target="_blank"><strong>GitHub</strong></a>
+                </li>
+                <li>
+                    <img src="https://image.similarpng.com/very-thumbnail/2021/01/Instagram-icon-with-flat-design-on-transparent-background-PNG.png" alt="Instagram" height="20" width="20">
+                    <a href="https://www.instagram.com/igor._18377/" target="_blank"><strong>Instagram</strong></a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2024 Meu Blog Pessoal</p>
+    </footer>
+
+</body>
+</html>
