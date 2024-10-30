@@ -1,0 +1,172 @@
+<html><head><base href="/" target="_blank"><title>Login</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .container {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    h2 {
+        color: #2c3e50;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 2em;
+        position: relative;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #34495e;
+        font-weight: 500;
+    }
+    
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+    
+    input:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+    
+    button {
+        width: 100%;
+        padding: 14px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
+    button:hover {
+        background: #2980b9;
+    }
+    
+    .error-message {
+        color: #e74c3c;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    
+    .signup-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .signup-link a {
+        color: #3498db;
+        text-decoration: none;
+    }
+    
+    .signup-link a:hover {
+        text-decoration: underline;
+    }
+    
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-10px); }
+        75% { transform: translateX(10px); }
+    }
+    
+    .error {
+        animation: shake 0.5s ease-in-out;
+        border-color: #e74c3c;
+    }
+    </style></head><body>
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm" method="post">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                    <div class="error-message"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="error-message"></div>
+                </div>
+                
+                <button type="submit">Entrar</button>
+            </form>
+            
+            <div class="signup-link">
+                <p>Não tem uma conta? <a href="contas/cadastro/">Cadastre-se</a></p>
+            </div>
+        </div>
+    
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Reset error states
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.classList.remove('error');
+            input.parentElement.querySelector('.error-message').textContent = '';
+        });
+    
+        // Get form values
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+    
+        // Validation
+        let hasError = false;
+    
+        if (username.trim() === '') {
+            showError('username', 'Por favor, insira seu nome de usuário');
+            hasError = true;
+        }
+    
+        if (password.trim() === '') {
+            showError('password', 'Por favor, insira sua senha');
+            hasError = true;
+        }
+    
+        if (!hasError) {
+            // Here you would typically verify credentials with your server
+            // For now, we'll just redirect to the home page
+            window.location.href = 'contas/home/';
+        }
+    });
+    
+    function showError(inputId, message) {
+        const input = document.getElementById(inputId);
+        input.classList.add('error');
+        input.parentElement.querySelector('.error-message').textContent = message;
+    }
+    </script>
+    </body></html>

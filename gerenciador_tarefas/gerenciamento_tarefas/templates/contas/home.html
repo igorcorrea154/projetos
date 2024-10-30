@@ -1,0 +1,118 @@
+<html><head><base href="/" target="_blank"><title>Home</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .container {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+    
+    h1 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-size: 2.5em;
+    }
+    
+    .success-message {
+        color: #27ae60;
+        font-size: 1.2em;
+        margin: 20px 0;
+    }
+    
+    .success-icon {
+        width: 80px;
+        height: 80px;
+        margin: 20px auto;
+        animation: scaleIn 0.5s ease-out;
+    }
+    
+    @keyframes scaleIn {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    
+    .button {
+        padding: 12px 30px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin: 20px 10px;
+    }
+    
+    .logout-button {
+        background: #3498db;
+    }
+    
+    .continue-button {
+        background: #27ae60;
+    }
+    
+    .button:hover {
+        opacity: 0.9;
+    }
+    
+    .welcome-animation {
+        animation: slideIn 1s ease-out;
+    }
+    
+    @keyframes slideIn {
+        0% {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    </style></head><body>
+        <div class="container">
+            <div class="welcome-animation">
+                <svg class="success-icon" viewBox="0 0 50 50">
+                    <circle cx="25" cy="25" r="25" fill="#27ae60"/>
+                    <path d="M38 15L22 33L12 25" stroke="white" stroke-width="3" fill="none"/>
+                </svg>
+                <h1>Bem-vindo!</h1>
+                <p class="success-message">Login realizado com sucesso!</p>
+                <div class="buttons-container">
+                    <a href="contas/tarefas/" class="button continue-button">Continuar</a>
+                    <a href="contas/login/" class="button logout-button">Sair</a>
+                </div>
+            </div>
+        </div>
+    </body></html>
