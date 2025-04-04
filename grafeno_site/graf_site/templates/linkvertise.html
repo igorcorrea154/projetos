@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Passar pelo Linkvertise</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #00c8ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #ff00d4;
+        }
+
+        .box {
+            background: #1a1a1a;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+            max-width: 500px;
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>🚀 Acesse o Linkvertise</h1>
+        <p>
+            <a href="https://linkvertise.com/422437/grafeno-hub?o=sharing" target="_blank">
+                Clique aqui para continuar
+            </a>
+        </p>
+        <p>Depois de passar pelo Linkvertise, 
+            <a href="{% url 'mostrar_token' %}">
+                clique aqui
+            </a>.
+        </p>
+    </div>
+</body>
+</html>
